@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #pics{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 89%;
+            grid-gap: 10px;
+            height: 200px;
+            border: solid black 1px;
+            margin: auto;
+            padding: 2px;
+        }
+
+        img {
+            width: 150px;
+            height: 100px;
+            border: 0px;
+            padding: 2px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">op plaatsnaam
+
+<div></div>
+
+</div>
+
+
+<div class="wrapper">
+
+    <div class="hoofd_container">
+
+        <div class="container">
+            <h3>Populaire steden</h3>
+
+            <div id="pics">
+
+                <div class="foto_box1">
+                    <img class="photo" src="plaatjes/huisje1.jpg">
+                    <div class="tekst">
+                        <div>
+                            <p>Den Haag</p>
+                            <p>305 woningen</p>
+                            <p>Gemiddeld € 1477</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="foto_box2">
+                    <img class="photo" src="plaatjes/huisje2.jpg">
+                    <div class="tekst">
+                        <div>
+                            <p>Eindhoven</p>
+                            <p>245 woningen</p>
+                            <p>Gemiddeld € 1215</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="foto_box3">
+                    <img class="photo" src="plaatjes/huisje3.jpg">
+                    <div class="tekst">
+                        <div>
+                            <p>Amsterdam</p>
+                            <p>665 woningen</p>
+                            <p>Gemiddeld € 1986</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="foto_box4">
+                    <img class="photo" src="plaatjes/huisje4.jpg">
+                    <div class="tekst">
+                        <div>
+                            <p>Rotterdam</p>
+                            <p>433 woningen</p>
+                            <p>Gemiddeld € 1299</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="foto_box5">
+                    <img class="photo" src="plaatjes/huisje5.jpg">
+                    <div class="tekst">
+                        <div>
+                            <p>Utrecht</p>
+                            <p>307 woningen</p>
+                            <p>Gemiddeld € 1451</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="foto_box6">
+                    <img class="photo" src="plaatjes/huisje6.jpg">
+                    <div class="tekst">
+                        <div>
+                            <p>Tilburg</p>
+                            <p>108 woningen</p>
+                            <p>Gemiddeld € 767</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div><!--einde wrapper-->
+
+<div class="menu">op plaatsnaam</div>
+
+<script>
+
+
+     var plaatjes = document.getElementsByTagName("img");
+     var random = 0;
+     var randomNumbers = [];
+
+     while(randomNumbers.length < 6) {
+         random = Math.floor(Math.random() * 6) + 1;
+         if (randomNumbers.lastIndexOf(random) == -1) {
+             randomNumbers.push(random);
+         }
+     }
+
+     random = 0;
+     for(var plaatje in plaatjes) {
+         plaatjes[plaatje].src = "plaatjes/huisje" + randomNumbers[random] + ".jpg";
+         random++;
+     }
+
+     var person = {firstName:"John", lastName:"Doe", age:46};
+     document.getElementById("demo").innerHTML = person["firstName"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var plaatjes = document.getElementsByTagName("img");
+    // var random = 0;
+    // var randomNumbers = [];
+    //
+    // while(randomNumbers.length < 6) {
+    //     random = Math.floor(Math.random() * 6) + 1;
+    //     if (randomNumbers.lastIndexOf(random) == -1) {
+    //         randomNumbers.push(random);
+    //     }
+    // }
+    //
+    // random = 0;
+    // for(var plaatje in plaatjes) {
+    //     plaatjes[plaatje].src = "plaatjes/huisje" + randomNumbers[random] + ".jpg";
+    //     random++;
+    // }
+
+
+    // for(var i = 0; i < plaatjes.length; i++) {
+    //     random = Math.floor(Math.random() * 9) + 1;
+    //     plaatjes[i].src = "plaatjes/huisje" + random + ".jpg";
+    // }
+
+
+</script>
+</body>
+</html>
